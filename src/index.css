@@ -1,0 +1,139 @@
+:root {
+  --purple-light: #A881E6;
+  --purple: #7450AC;
+  --dark-purple: #523480;
+  /*-----------------------*/
+  --gray-100: #FBF9FE;
+  --gray-200: #AFABB6;
+  /*-----------------------*/
+  --gray-300: #252529;
+  --gray-400: #17171A;
+  --gray-500: #111112;
+  --gray-600: #0C0C0D;
+  /*-----------------------*/
+  --success-light: #FFFFFF;
+  --success: #FFFFFF;
+  /*-----------------------*/
+  --pink: #DB5BBF;
+  --orange: #E07B67;
+  --yellow: #BB9F3A;
+  --green: #8CAD51;
+  --blue: #7B94CB;
+  --pink-dark: #251622;
+  --orange-dark: #261A17;
+  --yellow-dark: #211E12;
+  --green_dark: #1C2015;
+  --blue-dark: #1A1D23;
+}
+
+
+
+
+body {
+  background: var(--gray-600);
+  color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.adicionar {
+  display: flex;
+  width: 720px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.inputItens {
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 6px;
+  border: var(--gray300);
+  background: var(--gray-500);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+
+}
+
+.inputQuantidade {
+  width: 72px;
+  color: var(--gray-100);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.42px;
+  background-color: var(--gray-500);
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px 0px 0px 6px;
+}
+
+.selectQuantidade {
+  display: flex;
+  width: 72px;
+  padding: 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0px 6px 6px 0px;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-500);
+}
+
+.quantidade {
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 12px;
+
+
+}
+
+.q1 {
+  display: flex;
+}
+
+.selectCategoria {}
+
+.categoria {
+  display: flex;
+  width: 168px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: 30px;
+
+
+}
+
+.add {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  background: var(--purple);
+  border: none;
+  cursor: pointer;
+}
