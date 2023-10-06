@@ -21,7 +21,7 @@ function App() {
     setCategoria('frutas')
     setUnidade('UN')
 
-    console.log(arrayItems)
+
   }
 
   console.log(items, categoria, quantidade, unidade)
@@ -36,7 +36,7 @@ function App() {
         <div className='quantidade'>
           <h3>Quantidade:</h3>
           <div className='q1'>
-            <input className="inputQuantidade" id="quantidade" type="text" placeholder='Quantidade' value={quantidade} onChange={(event) => setQuantidade(event.target.value)} />
+            <input className="inputQuantidade" id="quantidade" type="number" placeholder='Quantidade' value={quantidade} onChange={(event) => setQuantidade(event.target.value)} />
             <select className='selectUnidade' name='unidade' value={unidade} onChange={(event) => setUnidade(event.target.value)}>
               <option value="UN">UN</option>
               <option value="KG">KG</option>
@@ -56,6 +56,13 @@ function App() {
         </div>
         <button type='submit' className='add' onClick={handleAddItems}><Plus /></button>
       </form>
+      <ul>
+        {arrayItems.map((item, index) => (
+          <li key={index}>
+            {item.Itens} - {item.Quantidade} {item.Unidade} ({item.Categoria})
+          </li>
+        ))}
+      </ul>
     </div>
     </>
   )
