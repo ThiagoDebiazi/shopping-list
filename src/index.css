@@ -46,6 +46,7 @@ body {
   gap: 12px;
 }
 
+
 .inputItens {
   padding: 12px 12px;
   display: flex;
@@ -85,7 +86,7 @@ body {
   border-radius: 6px 0px 0px 6px;
 }
 
-.selectQuantidade {
+.selectUnidade {
   display: flex;
   width: 72px;
   padding: 12px;
@@ -112,7 +113,9 @@ body {
   display: flex;
 }
 
-.selectCategoria {}
+.selectCategoria {
+  display: flex;
+}
 
 .categoria {
   display: flex;
