@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import { Plus } from 'lucide-react'
+import { Check, Plus } from 'lucide-react'
+import * as Checkbox from '@radix-ui/react-checkbox';
+
 
 function App() {
   const [items, setItems] = useState('')
@@ -60,10 +62,11 @@ function App() {
         <ul>
           {arrayItems.map((item, index) => (
             <li className='itemsSubmited2' key={index}>
-              <label className='checkBox'>
-                <input type='checkbox' checked='checked'></input>
-                <span className='Checkmark'></span>
-              </label>
+              <Checkbox.Root className="CheckboxRoot" defaultChecked id="c1">
+                <Checkbox.Indicator className="CheckboxIndicator">
+                  <Check className='check' width={15} height={15} />
+                </Checkbox.Indicator>
+              </Checkbox.Root>
               <div className='siItems'>
                 {item.Itens}
               </div>-

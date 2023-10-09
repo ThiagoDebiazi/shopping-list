@@ -66,6 +66,7 @@ body {
   gap: 8px;
 
 
+
 }
 
 .inputQuantidade {
@@ -168,46 +169,48 @@ li {
   list-style-type: none;
 }
 
-.checkBox {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  cursor: pointer;
-  height: 24px;
-  width: 24px;
-  font-size: 22px;
-}
-
-.checkBox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkBox:hover input~.Checkmark {
-  background-color: var(--gray-100);
-}
-
-.checkBox input:checked~.Checkmark {
-  background-color: var(--purple-light);
-}
-
-.checkBox .Checkmark:after {
+.CheckboxRoot {
+  background-color: var(--gray-300);
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
   display: flex;
-  background-color: var(--green);
-  content: "";
-  display: none;
-  position: absolute;
-  border: solid white;
-  height: 10px;
-  width: 5px;
-  top: 5px;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border: 2px solid var(--purple-light);
+
+}
+
+.CheckboxRoot input[type="checkbox"]:checked::after {
+  background-color: var(--green_dark);
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border: 2px solid var(--green);
+
+}
+
+.check {
+  color: var(--gren);
+}
+
+
+
+
+.CheckboxIndicator {
+  color: var(--violet-11);
+}
+
+.Label {
+  color: white;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1;
 }
 
 .itemsSubmited2 {
@@ -218,4 +221,36 @@ li {
   padding: 16px;
 
 
+}
+
+.siItems {
+  color: var(--base-gray-100, #FBF9FE);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  width: 194px;
+}
+
+.siQuantidade {
+  display: block;
+}
+
+.siUnidade {
+  color: var(--base-gray-200, #AFABB6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.siCategoria {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
 }
