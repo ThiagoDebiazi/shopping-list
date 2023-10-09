@@ -56,6 +56,7 @@ body {
   border-radius: 6px;
   border: var(--gray300);
   background: var(--gray-500);
+  color: var(--gray-200);
 }
 
 .items {
@@ -95,6 +96,7 @@ body {
   border-radius: 0px 6px 6px 0px;
   border: 1px solid var(--gray-300);
   background: var(--gray-500);
+  color: var(--gray-300);
 }
 
 .quantidade {
@@ -115,6 +117,17 @@ body {
 
 .selectCategoria {
   display: flex;
+  background-color: var(--gray-500);
+  color: var(--gray-200);
+  padding: 12px;
+  align-items: center;
+  letter-spacing: 0.42px;
+  border-radius: 6px;
+  gap: 8px;
+  align-self: stretch;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-400);
+
 }
 
 .categoria {
@@ -122,11 +135,8 @@ body {
   width: 168px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
   flex-shrink: 0;
   margin-left: 30px;
-
-
 }
 
 .add {
@@ -139,4 +149,73 @@ body {
   background: var(--purple);
   border: none;
   cursor: pointer;
+}
+
+.itemsSubmited {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-400);
+  margin-top: 50px;
+
+}
+
+li {
+  list-style-type: none;
+}
+
+.checkBox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  font-size: 22px;
+}
+
+.checkBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkBox:hover input~.Checkmark {
+  background-color: var(--gray-100);
+}
+
+.checkBox input:checked~.Checkmark {
+  background-color: var(--purple-light);
+}
+
+.checkBox .Checkmark:after {
+  display: flex;
+  background-color: var(--green);
+  content: "";
+  display: none;
+  position: absolute;
+  border: solid white;
+  height: 10px;
+  width: 5px;
+  top: 5px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.itemsSubmited2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray-200);
+  padding: 16px;
+
+
 }

@@ -56,13 +56,30 @@ function App() {
         </div>
         <button type='submit' className='add' onClick={handleAddItems}><Plus /></button>
       </form>
-      <ul>
-        {arrayItems.map((item, index) => (
-          <li key={index}>
-            {item.Itens} - {item.Quantidade} {item.Unidade} ({item.Categoria})
-          </li>
-        ))}
-      </ul>
+      <div className='itemsSubmited'>
+        <ul>
+          {arrayItems.map((item, index) => (
+            <li className='itemsSubmited2' key={index}>
+              <label className='checkBox'>
+                <input type='checkbox' checked='checked'></input>
+                <span className='Checkmark'></span>
+              </label>
+              <div className='siItems'>
+                {item.Itens}
+              </div>-
+              <div className='siQuantidade'>
+                {item.Quantidade}
+              </div>
+              <div className='siUnidade'>
+                {item.Unidade}
+              </div>
+              <div className='siCategoria'>
+                ({item.Categoria})
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
     </>
   )
