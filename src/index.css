@@ -196,7 +196,7 @@ li {
 }
 
 .check {
-  color: var(--gren);
+  color: var(--green);
 }
 
 
@@ -231,11 +231,23 @@ li {
   font-weight: 700;
   line-height: 130%;
   width: 194px;
+  margin-left: 16px;
+  flex-direction: column;
 }
 
+
+
 .siQuantidade {
-  display: block;
+  color: var(--base-gray-200, #AFABB6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  flex-direction: column;
+  display: flex;
 }
+
 
 .siUnidade {
   color: var(--base-gray-200, #AFABB6);
@@ -244,6 +256,7 @@ li {
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
+  flex-direction: column;
 }
 
 .siCategoria {

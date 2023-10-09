@@ -69,13 +69,11 @@ function App() {
               </Checkbox.Root>
               <div className='siItems'>
                 {item.Itens}
+                <div className='siQuantidade'>
+                  {item.Quantidade}
+                  {item.Unidade}
+                </div>
               </div>-
-              <div className='siQuantidade'>
-                {item.Quantidade}
-              </div>
-              <div className='siUnidade'>
-                {item.Unidade}
-              </div>
               <div className='siCategoria'>
                 ({item.Categoria})
               </div>
