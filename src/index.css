@@ -204,6 +204,7 @@ li {
 
 .CheckboxIndicator {
   color: var(--violet-11);
+
 }
 
 .Label {
@@ -266,4 +267,17 @@ li {
   align-items: center;
   gap: 6px;
   border-radius: 999px;
+}
+
+.markedItems {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-400);
+  margin-top: 50px;
+
 }

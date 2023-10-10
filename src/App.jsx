@@ -11,6 +11,15 @@ function App() {
   const [unidade, setUnidade] = useState('UN')
 
   const [arrayItems, setArrayItems] = useState([])
+  const [arrayMarkItem, setArrayMarkItem] = useState([])
+
+  const handleMarkItem = (index) => {
+    const novaLista = arrayItems[index]
+    if (!arrayMarkItem.includes(novaLista)) {
+      setArrayMarkItem([...arrayMarkItem, novaLista]);
+    }
+
+  }
 
 
 
@@ -26,7 +35,6 @@ function App() {
 
   }
 
-  console.log(items, categoria, quantidade, unidade)
   return (
     <><div>
       <h1>Lista de Compras</h1>
@@ -62,7 +70,7 @@ function App() {
         <ul>
           {arrayItems.map((item, index) => (
             <li className='itemsSubmited2' key={index}>
-              <Checkbox.Root className="CheckboxRoot" defaultChecked id="c1">
+              <Checkbox.Root className="CheckboxRoot" onClick={handleMarkItem(index)}>
                 <Checkbox.Indicator className="CheckboxIndicator">
                   <Check className='check' width={15} height={15} />
                 </Checkbox.Indicator>
@@ -77,6 +85,22 @@ function App() {
               <div className='siCategoria'>
                 ({item.Categoria})
               </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <ul>
+          {arrayMarkItem.map((item, index) => (
+            <li key={index}>
+              <label>
+                <input
+                  type="checkbox"
+                  className="markedItems"
+
+                />
+                {item.Itens} - {item.Quantidade} {item.Unidade} ({item.Categoria})
+              </label>
             </li>
           ))}
         </ul>
