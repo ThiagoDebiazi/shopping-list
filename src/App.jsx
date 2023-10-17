@@ -70,11 +70,11 @@ export default function App() {
           <div className='categoria'>
             <h3>Categoria</h3>
             <select className="selectCategoria" name='categoria' value={categoria} onChange={(event) => setCategoria(event.target.value)}>
-              <option value="frutas">frutas</option>
-              <option value='legumes'>legumes</option>
-              <option value='padaria'>padaria</option>
-              <option value='bebida'>bebida</option>
-              <option value='carne'>carne</option>
+              <option value="frutas" className='frutas'>frutas</option>
+              <option value='legumes' className='legumes'>legumes</option>
+              <option value='padaria' className='padaria'>padaria</option>
+              <option value='bebida' className='bebida'>bebida</option>
+              <option value='carne' className='carne'>carne</option>
             </select>
           </div>
           <button type='submit' className='add' onClick={handleAddItems}><Plus /></button>
